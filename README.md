@@ -1,4 +1,4 @@
-# The Responsive Mobile First Web Programming Challenge
+# Web Design Module
 
 ![Design preview for the Shortly URL shortening API coding challenge](./design/desktop-preview.jpg)
 
