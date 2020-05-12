@@ -18,6 +18,11 @@ Your users should be able to:
 - Copy the shortened link to their clipboard in a single click
 - Receive an error message when the `form` is submitted if:
   - The `input` field is empty
+  
+## Technical requirements
+- Your design must be [mobile first](https://medium.com/@Vincentxia77/what-is-mobile-first-design-why-its-important-how-to-make-it-7d3cf2e29d00)
+- You must make use of [fexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) and/or [css grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- You must use a style compiler tool such as [sass](https://sass-lang.com/), [less](http://lesscss.org/), [stylus](https://stylus-lang.com/), etc.
 
 ## Where to find everything
 
