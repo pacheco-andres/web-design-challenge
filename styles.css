@@ -1,40 +1,41 @@
-:root {
-  /* Primary colors */
-  --Cyan: hsl(180, 66%, 49%);
-  --Dark-Violet: hsl(257, 27%, 26%);
-  /* Secondary */
-  --Red: hsl(0, 87%, 67%);
-  /* Neutral */
-  --Gray: hsl(0, 0%, 75%);
-  --Grayish-Violet: hsl(257, 7%, 63%);
-  --Very-Dark-Blue: hsl(255, 11%, 22%);
-  --Vary-Dark-Violet: hsl(260, 8%, 14%); }
-
-.background-first-part {
-  background-color: #ffffff; }
-
-.background-second-part {
-  background-color: #f0f1f6; }
-
-.custom-links {
-  text-decoration: none; }
-
-.margin-top-40 {
-  margin-top: 40px; }
-
-.login-sign-up {
-  justify-content: flex-end; }
-
-.margin-left {
-  margin-left: 160px; }
-
-.navbar-links {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center; }
+/* Primary colors */
+/* Secondary */
+/* Neutral */
+.width-100 {
+  width: 100%; }
 
 .row {
   display: flex;
   flex-wrap: wrap; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between; }
+  .navbar .brand-links-section {
+    width: 50%;
+    display: flex; }
+  .navbar .links {
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%; }
+    .navbar .links .link {
+      text-decoration: none; }
+
+.link-no-subline {
+  text-decoration: none; }
+
+.background-color-athens-gray {
+  background-color: #f0f1f6; }
+
+.general-padding {
+  padding: 3% 10% 0 10%; }
+
+.login-sign-up {
+  display: flex;
+  align-items: center;
+  width: 12%;
+  justify-content: space-between; }
 
 /*# sourceMappingURL=styles.css.map */

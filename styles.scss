@@ -1,46 +1,62 @@
-:root{
-  /* Primary colors */
-  --Cyan: hsl(180, 66%, 49%);
-  --Dark-Violet: hsl(257, 27%, 26%);
-  /* Secondary */
-  --Red: hsl(0, 87%, 67%);
-  /* Neutral */
-  --Gray: hsl(0, 0%, 75%);
-  --Grayish-Violet: hsl(257, 7%, 63%);
-  --Very-Dark-Blue: hsl(255, 11%, 22%);
-  --Vary-Dark-Violet: hsl(260, 8%, 14%);
-}
 
+/* Primary colors */
+$cyan: hsl(180, 66%, 49%);
+$dark-violet: hsl(257, 27%, 26%);
+/* Secondary */
+$red: hsl(0, 87%, 67%);
+/* Neutral */
+$gray: hsl(0, 0%, 75%);
+$grayish-violet: hsl(257, 7%, 63%);
+$very-dark-blue: hsl(255, 11%, 22%);
+$vary-dark-violet: hsl(260, 8%, 14%);
+$athens-gray: #f0f1f6;
 
-.background-first-part {
-  background-color: #ffffff
-}
-
-.background-second-part {
-  background-color: #f0f1f6;
-}
-.custom-links{
-  text-decoration: none;
-}
-
-.margin-top-40 {
-  margin-top: 40px;
-}
-
-.login-sign-up {
-  justify-content: flex-end;
-}
-.margin-left {
-  margin-left: 160px;
-}
-
-.navbar-links {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.width-100 {
+  width: 100%;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+
+  .brand-links-section {
+    width: 50%;
+    display: flex;
+  }
+  
+  .links {
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+
+    .link {
+      text-decoration: none;
+    }
+  }
+}
+
+.link-no-subline {
+  text-decoration: none;
+}
+
+.background-color-athens-gray {
+  background-color: $athens-gray;
+}
+
+.general-padding {
+  padding: 3% 10% 0 10%;
+}
+
+.login-sign-up {
+  display: flex;
+  align-items: center;
+  width: 12%;
+  justify-content: space-between;
 }
