@@ -1,0 +1,46 @@
+:root{
+  /* Primary colors */
+  --Cyan: hsl(180, 66%, 49%);
+  --Dark-Violet: hsl(257, 27%, 26%);
+  /* Secondary */
+  --Red: hsl(0, 87%, 67%);
+  /* Neutral */
+  --Gray: hsl(0, 0%, 75%);
+  --Grayish-Violet: hsl(257, 7%, 63%);
+  --Very-Dark-Blue: hsl(255, 11%, 22%);
+  --Vary-Dark-Violet: hsl(260, 8%, 14%);
+}
+
+
+.background-first-part {
+  background-color: #ffffff
+}
+
+.background-second-part {
+  background-color: #f0f1f6;
+}
+.custom-links{
+  text-decoration: none;
+}
+
+.margin-top-40 {
+  margin-top: 40px;
+}
+
+.login-sign-up {
+  justify-content: flex-end;
+}
+.margin-left {
+  margin-left: 160px;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
