@@ -1,6 +1,13 @@
 /* Primary colors */
 /* Secondary */
 /* Neutral */
+h1 {
+  font-size: 79px;
+  margin: 0; }
+
+h4 {
+  font-size: 22px; }
+
 .width-100 {
   width: 100%; }
 
@@ -37,5 +44,49 @@
   align-items: center;
   width: 12%;
   justify-content: space-between; }
+
+.more-than-just {
+  width: 40%; }
+
+.image {
+  width: 40%;
+  display: flex; }
+
+.get-started-seccion {
+  margin-top: 5%;
+  padding-left: 10%; }
+  .get-started-seccion .get-started-button {
+    width: 160px;
+    height: 46px;
+    border-radius: 27px;
+    font-size: 17px;
+    background-color: #2acfcf;
+    color: #f0f1f6; }
+
+.shorten-link-section {
+  height: 170px;
+  width: 80%;
+  margin: auto;
+  background-image: url("images/bg-shorten-desktop.svg");
+  background-repeat: no-repeat;
+  background-color: #3b3054;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .shorten-link-section .input {
+    width: 788px;
+    height: 58px;
+    border-radius: 12px;
+    font-size: 19px;
+    padding-left: 32px; }
+  .shorten-link-section .button {
+    width: 192px;
+    height: 58px;
+    border-radius: 12px;
+    margin-left: 21px;
+    background-color: #2acfcf;
+    font-size: 22px;
+    color: #f0f1f6; }
 
 /*# sourceMappingURL=styles.css.map */
