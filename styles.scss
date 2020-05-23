@@ -11,14 +11,26 @@ $very-dark-blue: hsl(255, 11%, 22%);
 $vary-dark-violet: hsl(260, 8%, 14%);
 $athens-gray: #f0f1f6;
 $Athens-gray: #F0F1F6;
+$Santas-gray: #9F9EA3;
+$baltic-sea: #322E3B;
+$black-white: #FFFFFB;
 
 h1 {
-  font-size: 79px;
+  font-size: 76px;
   margin: 0;
+  line-height: 89px;
+  color: $baltic-sea;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: auto;
 }
 
 h4 {
-  font-size: 22px;
+  font-size: 23px;
+  margin-top: 4px;
+  color: $Santas-gray;
 }
 
 .width-100 {
@@ -37,14 +49,18 @@ h4 {
   .brand-links-section {
     width: 50%;
     display: flex;
+
+    .dimention-logo {
+      width: 115px;
+      height: 34px;
+    }
   }
   
   .links {
-    margin-left: 10%;
+    margin-left: 8%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 40%;
+    width: 47%;
 
     .link {
       text-decoration: none;
@@ -54,6 +70,7 @@ h4 {
 
 .link-no-subline {
   text-decoration: none;
+  color: $Santas-gray;
 }
 
 .background-color-athens-gray {
@@ -61,7 +78,7 @@ h4 {
 }
 
 .general-padding {
-  padding: 3% 10% 0 10%;
+  padding: 4% 10% 0 11%;
 }
 
 .login-sign-up {
@@ -80,76 +97,94 @@ h4 {
   }
 }
 
-.more-than-just {
-  width: 40%;
-} 
-
-.image{
-  display: flex;
-}
-
 .get-started-seccion {
-  margin-top: 5%;
-  padding-left: 10%;
+  margin-top: 9%;
+  padding-left: 11%;
 
-  .get-started-button {
-    width: 160px;
-    height: 46px;
-    margin-bottom: 144px;
-    border-radius: 27px;
-    font-size: 17px;
-    color: $athens-gray;
-    background-color: $cyan;
-  }
-}
+  .more-than-just {
+    width: 50%;
+    margin-top: 7%;
 
-.shorten-link-section {
-  height: 170px;
-  width: 80%;
-  margin: auto;
-  background-image: url("images/bg-shorten-desktop.svg");
-  background-repeat: no-repeat;
-  background-color: $dark-violet;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .input {
-    width: 788px;
-    height: 58px;
-    border-radius: 12px;
-    font-size: 19px;
-    padding-left: 32px;
-  }
-
-  .button {
-    width: 192px;
-    height: 58px;
-    border-radius: 12px;
-    margin-left: 21px;
-    background-color: $cyan;
-    font-size: 22px;
-    color: $athens-gray;
+    .get-started-button {
+      width: 160px;
+      height: 46px;
+      margin-bottom: 144px;
+      border-radius: 27px;
+      font-size: 17px;
+      color: $athens-gray;
+      background-color: $cyan;
+    }
+  } 
+  
+  .hero-image {
+    background-size: cover;
+    background-position: left;
+    height: 470px;
+    background-repeat: no-repeat;
+    margin-left: 3%;
+    width: 47%;
+    background-image: url("images/illustration-working.svg");
   }
 }
 
 .advanced-statistics-section {
   background-color: $Athens-gray;
-  padding: 5% 10% 5% 10%;
+  position: relative;
+
+  .shorten-link-section {
+    height: 170px;
+    border-radius: 10px;
+    width: 77%;
+    margin: auto;
+    background-image: url("images/bg-shorten-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: $dark-violet;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -80px;
+    left: 12%;
+  
+    .input {
+      width: 750px;
+      height: 62px;
+      border-radius: 12px;
+      font-size: 19px;
+      padding-left: 32px;
+      color: $grayish-violet;
+      border: none;
+      font-family: 'Poppins', sans-serif;
+    }
+  
+    .button {
+      width: 190px;
+      height: 62px;
+      border-radius: 12px;
+      margin-left: 21px;
+      background-color: $cyan;
+      font-size: 20px;
+      color: $athens-gray;
+      border: none;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+  }
 
   .advanced-statistics-text {
     text-align: center;
 
     .title {
-      font-family: sans-serif;
-      font-size: 45px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 38px;
       margin-bottom: 16px;
     }
 
     .description {
-      font-size: 26px;
+      font-size: 18px;
       line-height: 33px;
+      color: $grayish-violet;
     }
   }
 
@@ -160,5 +195,43 @@ h4 {
     height: 269px;
     text-align: center;
     background-color: white;
+  }
+}
+
+.boost-your-section {
+  background-image: url("images/bg-boost-desktop.svg");
+  background-color: $dark-violet;
+  background-repeat: no-repeat;
+  height: 252px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-size: 39px;
+    color: $black-white;
+    margin-bottom: 12px;
+  }
+
+  .button {
+    width: 191px;
+    height: 54px;
+    border-radius: 29px;
+    margin-bottom: 49px;
+    background-color: $cyan;
+    font-size: 18px;
+    color: $Athens-gray;
+    border: $Santas-gray;
+  }
+}
+
+footer {
+  background-color: $very-dark-blue;
+  justify-content: space-between;
+  padding: 5%;
+
+  ul {
+    list-style: none;
   }
 }
