@@ -19,11 +19,21 @@ h1 {
   margin: 0;
   line-height: 89px;
   color: $baltic-sea;
+
+  @media only screen and (max-width: 425px) {
+    font-size: 38px;
+    line-height: 41px;
+  }
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   margin: auto;
+
+  @media only screen and (max-width: 425px) {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .height {
@@ -35,6 +45,18 @@ h4 {
   margin-top: 4px;
   color: $santas-gray;
   font-weight: 500;
+
+  @media only screen and (max-width: 425px) {
+    line-height: 32px;
+    width: 81%;
+    margin: auto;
+    font-size: 18px;
+    margin-top: 5%;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .width-100 {
@@ -69,12 +91,72 @@ h4 {
     .link {
       text-decoration: none;
     }
+
+    @media only screen and (max-width: 425px) {
+      display: none;
+    }
+  }
+
+  .mobile-menu-icon {
+    display: none;
+
+    @media only screen and (max-width: 425px) {
+      display: block;
+
+      div {
+        width: 27px;
+        height: 3px;
+        background-color: $santas-gray;
+        margin: 6px 0;
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  display: none;
+
+  @media only screen and (max-width: 425px) {
+    /* Activar con javascript */
+    display: none;
+
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    position: absolute;
+    height: 340px;
+    background-color: $dark-violet;
+    border-radius: 10px;
+    justify-content: space-around;
+
+    .line {
+      width: 90%;
+      height: 1px;
+      background-color: $santas-gray;
+      margin: 6px 0;
+    }
+
+    .link-no-subline {
+      color: $athens-gray;
+    }
+
+    .button {
+      width: 90%;
+      height: 46px;
+      font-weight: 600;
+      border-radius: 33px;
+      background-color: $cyan;
+      font-size: 17px;
+      color: $athens-gray;
+      border: none;
+    }
   }
 }
 
 .link-no-subline {
   text-decoration: none;
   color: $santas-gray;
+  font-weight: 600;
 }
 
 .background-color-athens-gray {
@@ -94,15 +176,21 @@ h4 {
   .button {
     width: 112px;
     height: 41px;
+    font-weight: 600;
     border-radius: 33px;
     background-color: $cyan;
     font-size: 17px;
     color: $athens-gray;
   }
+
+  @media only screen and (max-width: 425px) {
+    display: none;
+  }
 }
 
 .get-started-seccion {
-  margin-top: 9%;
+  display: flex;
+  margin-top: 5%;
   height: 615px;
   padding-left: 11%;
 
@@ -119,7 +207,7 @@ h4 {
       color: $athens-gray;
       background-color: $cyan;
     }
-  } 
+  }
   
   .hero-image {
     background-size: cover;
@@ -130,12 +218,40 @@ h4 {
     width: 47%;
     background-image: url("images/illustration-working.svg");
   }
+
+  @media only screen and (max-width: 425px) {
+    flex-direction: column-reverse;
+    margin-bottom: 30%;
+    padding: 0;
+    text-align: center;
+    height: 685px;
+    
+    .more-than-just {
+      width: 100%;
+      height: 360px;
+    }
+
+    .hero-image {
+      width: 90%;
+      margin-left: 10%;
+      height: 300px;
+    }
+
+    .get-started-button {
+      margin-top: 13%;
+      margin-bottom: 10%;
+    }
+  }
 }
 
 .advanced-statistics-section {
   background-color: $athens-gray;
   position: relative;
   height: 880px;
+
+  @media screen and (max-width: 425px) {
+    height: 1600px;
+  }
 
   .shorten-link-section {
     height: 170px;
@@ -176,6 +292,27 @@ h4 {
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
     }
+    
+    @media only screen and (max-width: 425px) {
+      display: flex;
+      width: 322px;
+      flex-direction: column;
+      left: 7%;
+
+      .input {
+        width: 243px;
+        height: 45px;
+        border-radius: 6px;
+      }
+        
+      .button {
+        width: 277px;
+        height: 45px;
+        margin-left: 0;
+        border-radius: 6px;
+        margin-top: 14px;
+      }
+    }
   }
 
   .advanced-statistics-text {
@@ -193,6 +330,10 @@ h4 {
       font-size: 18px;
       line-height: 33px;
       color: $grayish-violet;
+
+      @media screen and (max-width: 425px) {
+        margin-bottom: 47px
+      }
     }
   }
 
@@ -218,6 +359,14 @@ h4 {
       right: -80px;
       top: 47%;
       z-index: 0;
+
+      @media screen and (max-width: 425px) {
+        width: 3%;
+        height: 51px;
+        right: 50%;
+        top: 307px;
+    
+      }
     }
 
     .detailed-record {
@@ -235,13 +384,19 @@ h4 {
       right: -80px;
       top: 47%;
       z-index: 0;
+
+      @media screen and (max-width: 425px) {
+        width: 3%;
+        height: 63px;
+        right: 50%;
+        top: 307px;
+      }
     }
 
     .fully-customizable {
       position: relative;
       margin-top: 8%;
     }
-
 
     .dvanced-statistics-icons {
       width: 25%;
@@ -277,6 +432,35 @@ h4 {
         text-align: justify;
         padding-left: 33px;
         color: $grayish-violet;
+       
+        @media screen and (max-width: 425px) {
+          width: 82%;
+          margin: auto;
+          font-size: 16px;
+          padding: 0;
+
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 425px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .advanced-statistics-box {
+        margin-bottom: 37px;
+      }
+
+      .dvanced-statistics-icons {
+        right: 130px;
+      }
+
+      .tittle-box {
+        text-align: end;
       }
     }
   }
@@ -308,6 +492,14 @@ h4 {
     color: $athens-gray;
     border: $santas-gray;
   }
+  @media only screen and (max-width: 425px) {
+    height: 300px;
+
+    h2 {
+      font-size: 26px;
+      margin-top: 48px;
+    }
+  }
 }
 
 footer {
@@ -317,6 +509,12 @@ footer {
   padding-left: 11%;
   padding-right: 11%;
   padding-bottom: 20px;
+
+  @media only screen and (max-width: 425px) {
+    height: 823px;
+    justify-content: center;
+    padding-top: 49px;
+  }
 
   ul {
     list-style: none;
@@ -329,13 +527,26 @@ footer {
     justify-content: space-around;
     margin-top: -3%;
     padding-left: 121px;
+
+    @media only screen and (max-width: 425px) {
+      flex-direction: column;
+      align-items: center;
+      padding-left: 0;
+      padding-bottom: 63px;
+
+      ul {
+        padding-left: 0;
+        text-align: center;
+      }
+    }
   }
 
   .list-tittle {
     line-height: 59px;
     color: $athens-gray;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
+    font-weight: 600;
   }
       
   .list {
@@ -349,4 +560,12 @@ footer {
     display: flex;
     justify-content: space-between;
   }
+}
+
+
+
+
+/* Mobile media queries */
+
+@media only screen and (max-width: 425px) {
 }
