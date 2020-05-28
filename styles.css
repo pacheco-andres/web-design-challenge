@@ -177,8 +177,7 @@ h4 {
 
 .advanced-statistics-section {
   background-color: #F0F1F6;
-  position: relative;
-  height: 880px; }
+  position: relative; }
   @media screen and (max-width: 425px) {
     .advanced-statistics-section {
       height: 1600px; } }
@@ -235,8 +234,7 @@ h4 {
           margin-top: 14px; } }
   .advanced-statistics-section .advanced-statistics-text {
     text-align: center;
-    padding-top: 174px;
-    margin-bottom: 6%; }
+    margin: 7%; }
     .advanced-statistics-section .advanced-statistics-text .title {
       font-family: 'Poppins', sans-serif;
       font-size: 38px;
@@ -245,16 +243,24 @@ h4 {
       font-size: 18px;
       line-height: 33px;
       color: #9e9aa7; }
-      @media screen and (max-width: 425px) {
-        .advanced-statistics-section .advanced-statistics-text .description {
-          margin-bottom: 47px; } }
+    @media screen and (max-width: 425px) {
+      .advanced-statistics-section .advanced-statistics-text .title {
+        font-size: 27px; }
+      .advanced-statistics-section .advanced-statistics-text .description {
+        margin-bottom: 47px;
+        width: 80%;
+        margin: auto;
+        font-size: 16px; }
+        .advanced-statistics-section .advanced-statistics-text .description br {
+          display: none; } }
   .advanced-statistics-section .box {
     display: flex;
     justify-content: space-between;
     display: flex;
     margin-bottom: 0px;
     width: 78%;
-    margin: auto; }
+    margin: auto;
+    padding-bottom: 4%; }
     .advanced-statistics-section .box .brand-recognition {
       position: relative; }
     .advanced-statistics-section .box .brand-recognition::after {
@@ -418,6 +424,30 @@ footer {
     display: flex;
     justify-content: space-between; }
 
-/* Mobile media queries */
+.link-shorten {
+  background-color: #FFFFFB;
+  width: 77%;
+  height: 79px;
+  margin: 10% auto 0;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between; }
+  .link-shorten .original-link {
+    width: 20%; }
+  .link-shorten .copy-section {
+    width: 40%;
+    display: flex;
+    justify-content: space-between; }
+  .link-shorten .button-copy {
+    width: 10%;
+    height: 48%;
+    font-size: 17px;
+    border-radius: 6px;
+    background-color: #2acfcf;
+    color: #F0F1F6; }
+
+.empty {
+  width: 10px;
+  height: 1px; }
 
 /*# sourceMappingURL=styles.css.map */

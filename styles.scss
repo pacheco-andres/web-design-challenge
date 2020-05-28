@@ -247,7 +247,6 @@ h4 {
 .advanced-statistics-section {
   background-color: $athens-gray;
   position: relative;
-  height: 880px;
 
   @media screen and (max-width: 425px) {
     height: 1600px;
@@ -317,8 +316,7 @@ h4 {
 
   .advanced-statistics-text {
     text-align: center;
-    padding-top: 174px;
-    margin-bottom: 6%;
+    margin: 7%;
 
     .title {
       font-family: 'Poppins', sans-serif;
@@ -330,9 +328,22 @@ h4 {
       font-size: 18px;
       line-height: 33px;
       color: $grayish-violet;
+    }
 
-      @media screen and (max-width: 425px) {
-        margin-bottom: 47px
+    @media screen and (max-width: 425px) {
+      .title {
+        font-size: 27px;
+      }
+
+      .description {
+        margin-bottom: 47px;
+        width: 80%;
+        margin: auto;
+        font-size: 16px;
+
+        br {
+          display: none;
+        }
       }
     }
   }
@@ -344,6 +355,7 @@ h4 {
     margin-bottom: 0px;
     width: 78%;
     margin: auto;
+    padding-bottom: 4%;
 
     .brand-recognition {
       position: relative;
@@ -562,10 +574,36 @@ footer {
   }
 }
 
+.link-shorten {
+  background-color: $black-white;
+  width: 77%;
+  height: 79px;
+  margin: 10% auto 0;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
 
+  .original-link {
+    width: 20%;
+  }
 
+  .copy-section {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+  }
 
-/* Mobile media queries */
+  .button-copy{
+    width: 10%;
+    height: 48%;
+    font-size: 17px;
+    border-radius: 6px;
+    background-color: $cyan;
+    color: $athens-gray;
+  }
+}
 
-@media only screen and (max-width: 425px) {
+.empty {
+  width: 10px;
+  height: 1px;
 }
