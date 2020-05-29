@@ -189,9 +189,6 @@ h4 {
 .advanced-statistics-section {
   background-color: #F0F1F6;
   position: relative; }
-  @media screen and (max-width: 425px) {
-    .advanced-statistics-section {
-      height: 1600px; } }
   .advanced-statistics-section .shorten-link-section {
     height: 170px;
     border-radius: 10px;
@@ -229,6 +226,13 @@ h4 {
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
       outline: none; }
+    .advanced-statistics-section .shorten-link-section .error-message {
+      display: none;
+      position: absolute;
+      bottom: 13%;
+      left: 5%;
+      font-style: italic;
+      color: #f46262; }
     @media only screen and (max-width: 425px) {
       .advanced-statistics-section .shorten-link-section {
         display: flex;
@@ -246,7 +250,10 @@ h4 {
           border-radius: 6px;
           margin-top: 14px;
           border: #9F9EA3;
-          outline: none; } }
+          outline: none; }
+        .advanced-statistics-section .shorten-link-section .error-message {
+          bottom: 2%;
+          left: 7%; } }
   .advanced-statistics-section .advanced-statistics-text {
     text-align: center;
     margin: 7%; }
@@ -448,32 +455,72 @@ footer {
 .link-shorten {
   background-color: #FFFFFB;
   width: 77%;
-  height: 79px;
-  margin: 10% auto 0;
+  height: 75px;
+  margin: 20px auto;
   border-radius: 7px;
   display: flex;
   justify-content: space-between; }
   .link-shorten .original-link {
-    width: 20%; }
+    width: 80%;
+    margin: 2%; }
   .link-shorten .copy-section {
     width: 40%;
     display: flex;
-    justify-content: space-between; }
+    align-items: center;
+    color: #2acfcf; }
+    .link-shorten .copy-section .link {
+      width: 60%; }
   .link-shorten .button-copy {
-    width: 10%;
-    height: 48%;
+    width: 27%;
+    height: 40px;
     font-size: 17px;
     border-radius: 6px;
     background-color: #2acfcf;
     color: #F0F1F6;
     outline: none;
     border: #9F9EA3; }
+  @media only screen and (max-width: 425px) {
+    .link-shorten {
+      width: 85%;
+      height: 140px;
+      flex-direction: column; }
+      .link-shorten .original-link {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 95%;
+        margin: 2% 0;
+        border-bottom: 1px solid #9F9EA3;
+        padding-left: 15px;
+        padding-bottom: 33px; }
+      .link-shorten .copy-section {
+        flex-direction: column;
+        align-items: end;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 3%; }
+        .link-shorten .copy-section .link {
+          margin: 3% 15px; }
+      .link-shorten .button-copy {
+        width: 90%;
+        height: 40px;
+        margin: auto; } }
 
 .empty {
   width: 10px;
-  height: 1px; }
+  height: 1px;
+  margin-bottom: 8%; }
+  @media only screen and (max-width: 425px) {
+    .empty {
+      margin-bottom: 33%; } }
 
 .pointer {
   cursor: pointer; }
+
+.error::placeholder {
+  color: #f46262; }
+
+.error {
+  border: 1px solid #f46262 !important; }
 
 /*# sourceMappingURL=styles.css.map */

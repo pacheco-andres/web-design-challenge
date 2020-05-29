@@ -50,17 +50,11 @@
   </section>
   <section class="advanced-statistics-section">
     <div class="shorten-link-section">
-      <input class="input" type="text" placeholder="Shorter a link here...">
+      <input class="input" type="text" placeholder="Shorter a link here..." onfocus="clearError()">
       <button class="button pointer" onclick="createShortenLink()">Shorten it!</button>
+      <div class="error-message">Please add a link</div>
     </div>
     <div class="empty"></div>
-    <div class="link-shorten">
-      <p class="original-link">dsdsnbdsndb</p>
-      <div class="copy-section">
-        <p>dsdsnbdsndb</p>
-        <button class="button-copy pointer">copy</button>
-      </div>
-    </div>
     <div class="advanced-statistics-text">
       <h2 class="title">Advanced statistics</h2>
       <div class="description">Track how your links performing across the web with <br> our advanced statistics dashboar.</div>
