@@ -1,4 +1,5 @@
 document.getElementsByClassName('mobile-menu')[0].style.display = "none"
+showShortenLinks();
 
 function activateMobileMenu() {
   var menu = document.getElementsByClassName('mobile-menu')[0];
@@ -13,18 +14,13 @@ function createShortenLink() {
   var request = new XMLHttpRequest();
   var shortenLinkSection = document.getElementsByClassName('shorten-link-section')[0];
   var link = shortenLinkSection.getElementsByClassName('input')[0];
+  var localStorage = window.localStorage;
 
   request.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 201) {
       var response = JSON.parse(this.response)
-      var shortenLink = "https://rel.ink/".concat(response.hashid)
-      document.getElementsByClassName('empty')[0].insertAdjacentHTML('afterend',`<div class='link-shorten'> \
-                                                                                   <p class='original-link'>${link.value}</p> \
-                                                                                   <div class='copy-section'> \
-                                                                                     <p class='link'>${shortenLink}</p> \
-                                                                                     <button class='button-copy pointer' onclick='copy()'>copy</button> \ 
-                                                                                   </div> \
-                                                                                 </div>`);
+      localStorage.setItem(response.hashid, this.response)
+      showShortenLinks();
       link.value = "";
     } else if (this.readyState == 4 && this.status != 201){
       var section = document.getElementsByClassName('shorten-link-section')[0];
@@ -37,6 +33,28 @@ function createShortenLink() {
   request.open("POST", "https://rel.ink/api/links/", true);
   request.setRequestHeader("Content-type", "application/json;charset=UTF-8");
   request.send(JSON.stringify({ "url": link.value}));
+}
+
+function showShortenLinks() {
+  document.querySelectorAll(".link-shorten").forEach(function(a){
+    a.remove()
+  })
+
+  for (var a in localStorage) {
+    if (a != "csm-hit" && a != "csm-bf" && a != "csm:adb") {
+      var response = JSON.parse(localStorage.getItem(a));
+      var shortenLink = "https://rel.ink/".concat(response.hashid);
+
+      document.getElementsByClassName('empty')[0].insertAdjacentHTML('afterend',`<div class='link-shorten'> \
+                                                                                   <p class='original-link'>${response.url}</p> \
+                                                                                   <div class='copy-section'> \
+                                                                                     <p class='link'>${shortenLink}</p> \
+                                                                                     <button class='button-copy pointer' onclick='copy()'>copy</button> \ 
+                                                                                   </div> \
+                                                                                 </div>`);
+                                                                                
+    }
+  }
 }
 
 function clearError() {

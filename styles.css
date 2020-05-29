@@ -450,7 +450,7 @@ footer {
     display: flex;
     justify-content: space-between; }
     footer .icon-social-media .images:hover {
-      color: orange; }
+      fill: orange; }
 
 .link-shorten {
   background-color: #FFFFFB;
