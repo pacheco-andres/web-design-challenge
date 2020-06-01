@@ -639,6 +639,9 @@ footer {
   .original-link {
     width: 80%;
     margin: 2%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .copy-section {
@@ -669,9 +672,6 @@ footer {
     flex-direction: column;
 
     .original-link {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
       width: 95%;
       margin: 2% 0;
       border-bottom: 1px solid $santas-gray;

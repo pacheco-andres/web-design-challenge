@@ -470,7 +470,10 @@ footer {
   justify-content: space-between; }
   .link-shorten .original-link {
     width: 80%;
-    margin: 2%; }
+    margin: 2%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
   .link-shorten .copy-section {
     width: 40%;
     display: flex;
@@ -493,9 +496,6 @@ footer {
       height: 140px;
       flex-direction: column; }
       .link-shorten .original-link {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
         width: 95%;
         margin: 2% 0;
         border-bottom: 1px solid #9F9EA3;
