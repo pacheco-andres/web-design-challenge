@@ -19,10 +19,15 @@ h1 {
   margin: 0;
   line-height: 89px;
   color: $baltic-sea;
-
-  @media only screen and (max-width: 425px) {
+  
+  @media (min-width: 320px) and (max-width: 425px) {
     font-size: 38px;
     line-height: 41px;
+  }
+
+  @media (min-width: 426px) and (max-width: 768px) {
+    font-size: 46px;
+    line-height: 48px;
   }
 }
 
@@ -30,7 +35,7 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: auto;
 
-  @media only screen and (max-width: 425px) {
+  @media (min-width: 320px) and (max-width: 425px) {
     width: 100%;
     margin: 0;
   }
@@ -46,7 +51,7 @@ h4 {
   color: $santas-gray;
   font-weight: 500;
 
-  @media only screen and (max-width: 425px) {
+  @media (min-width: 320px) and (max-width: 425px) {
     line-height: 32px;
     width: 81%;
     margin: auto;
@@ -71,6 +76,7 @@ h4 {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 
   .brand-links-section {
     width: 50%;
@@ -79,6 +85,10 @@ h4 {
     .dimention-logo {
       width: 115px;
       height: 34px;
+    }
+
+    @media (min-width: 769px) and (max-width: 1280px) {
+      width: 70%;
     }
   }
   
@@ -96,15 +106,19 @@ h4 {
       color: black;
     }
 
-    @media only screen and (max-width: 425px) {
+    @media (max-width: 768px) {
       display: none;
+    }
+
+    @media (min-width: 769px) and (max-width: 1280px) {
+      width: 70%;
     }
   }
 
   .mobile-menu-icon {
     display: none;
 
-    @media only screen and (max-width: 425px) {
+    @media (max-width: 768px) {
       display: block;
 
       div {
@@ -120,12 +134,10 @@ h4 {
 .mobile-menu {
   display: none;
 
-  @media only screen and (max-width: 425px) {
-    /* Activar con javascript */
+  @media (max-width: 768px) {
     display: none;
-
     flex-direction: column;
-    width: 90%;
+    width: 337px;
     align-items: center;
     position: absolute;
     height: 340px;
@@ -194,8 +206,12 @@ h4 {
     color:black;
   }
 
-  @media only screen and (max-width: 425px) {
+  @media (max-width: 768px) {
     display: none;
+  }
+
+  @media (min-width: 769px) and (max-width: 1280px) {
+    width: 27%;
   }
 }
 
@@ -232,7 +248,7 @@ h4 {
     background-image: url("images/illustration-working.svg");
   }
 
-  @media only screen and (max-width: 425px) {
+  @media (max-width: 768px) {
     flex-direction: column-reverse;
     margin-bottom: 30%;
     padding: 0;
@@ -255,7 +271,12 @@ h4 {
       margin-bottom: 10%;
       outline: none;
       border: #9F9EA3;
+      width: 45%;
     }
+  }
+
+  @media (min-width: 769px) and (max-width: 1280px) {
+    height: 780px;
   }
 }
 
@@ -280,7 +301,7 @@ h4 {
     left: 12%;
   
     .input {
-      width: 750px;
+      width: 65%;
       height: 62px;
       border-radius: 12px;
       font-size: 19px;
@@ -291,7 +312,7 @@ h4 {
     }
   
     .button {
-      width: 190px;
+      width: 17%;
       height: 62px;
       border-radius: 12px;
       margin-left: 21px;
@@ -314,20 +335,21 @@ h4 {
       color: $red;
     }
     
-    @media only screen and (max-width: 425px) {
+    @media (max-width: 768px) {
       display: flex;
-      width: 322px;
       flex-direction: column;
-      left: 7%;
+      width: 82%;
+      left: 0;
+      right: 0;
 
       .input {
-        width: 243px;
+        width: 79%;
         height: 45px;
         border-radius: 6px;
       }
         
       .button {
-        width: 277px;
+        width: 90%;
         height: 45px;
         margin-left: 0;
         border-radius: 6px;
@@ -385,63 +407,38 @@ h4 {
     width: 78%;
     margin: auto;
     padding-bottom: 4%;
+    flex-wrap: wrap;
+    position: relative;
 
     .brand-recognition {
       position: relative;
-    }
 
-    .brand-recognition::after {
-      content: "";
-      display: block;
-      width: 23%;
-      background-color: $cyan;
-      height: 10px;
-      position: absolute;
-      right: -80px;
-      top: 47%;
-      z-index: 0;
-
-      @media screen and (max-width: 425px) {
-        width: 3%;
-        height: 51px;
-        right: 50%;
-        top: 307px;
-    
+      @media (min-width: 769px) and (max-width: 1280px) {
+        width: 30%;
       }
     }
 
     .detailed-record {
       margin-top: 4%;
       position: relative;
-    }
 
-    .detailed-record::after {
-      content: "";
-      display: block;
-      width: 23%;
-      background-color: $cyan;
-      height: 10px;
-      position: absolute;
-      right: -80px;
-      top: 47%;
-      z-index: 0;
-
-      @media screen and (max-width: 425px) {
-        width: 3%;
-        height: 63px;
-        right: 50%;
-        top: 307px;
+      @media (min-width: 769px) and (max-width: 1280px) {
+        width: 30%;
       }
     }
 
     .fully-customizable {
       position: relative;
       margin-top: 8%;
+
+      @media (min-width: 769px) and (max-width: 1280px) {
+        width: 30%;
+      }
     }
 
-    .dvanced-statistics-icons {
-      width: 25%;
-      height: 87px;
+    .advanced-statistics-icons {
+      width: 27%;
+      height: 85px;
       border-radius: 60px;
       background-color: $dark-violet;
       display: flex;
@@ -449,23 +446,21 @@ h4 {
       align-items: center;
       position: absolute;
       top: 0%;
-      right: 224px;
+      right: 38%;
     }
 
     .advanced-statistics-box {
-      width: 26%;
       margin-bottom: 8px;
       width: 31%;
-      height: 269px;
-      text-align: center;
+      min-height: 269px;
       background-color: white;
       border-radius: 2%;
-      width: 346px;
+      width: 101%;
     
       .tittle-box {
         padding-top: 78px;
         font-size: 23px;
-        padding-right: 59px;
+        padding-left: 33px;
         margin-bottom: 13px;
       }
       
@@ -474,7 +469,7 @@ h4 {
         padding-left: 33px;
         color: $grayish-violet;
        
-        @media screen and (max-width: 425px) {
+        @media (max-width: 768px) {
           width: 82%;
           margin: auto;
           font-size: 16px;
@@ -487,21 +482,39 @@ h4 {
       }
     }
 
-    @media screen and (max-width: 425px) {
+    @media (max-width: 768px) {
       display: flex;
       flex-direction: column;
       align-items: center;
 
       .advanced-statistics-box {
         margin-bottom: 37px;
+        width: 300px;
       }
 
-      .dvanced-statistics-icons {
-        right: 130px;
+      .advanced-statistics-icons {
+        width: 28%;
+        height: 82px;
+        right: 37%;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1280px) {
+      .advanced-statistics-icons {
+        width: 31%;
+        height: 80px;
+        right: 53%;
       }
 
       .tittle-box {
-        text-align: end;
+        padding-top: 68px;
+        font-size: 20px;
+        padding-right: 0;
+        margin-bottom: 5%;
+      }
+
+      .text-box {
+        font-size: 12px;
       }
     }
   }
@@ -536,7 +549,7 @@ h4 {
     border: #9F9EA3;
   }
 
-  @media only screen and (max-width: 425px) {
+  @media (min-width: 320px) and (max-width: 425px) {
     height: 300px;
 
     h2 {
@@ -554,7 +567,7 @@ footer {
   padding-right: 11%;
   padding-bottom: 20px;
 
-  @media only screen and (max-width: 425px) {
+  @media (max-width: 768px) {
     height: 823px;
     justify-content: center;
     padding-top: 49px;
@@ -576,7 +589,7 @@ footer {
       color: $cyan;
     }
 
-    @media only screen and (max-width: 425px) {
+    @media (max-width: 768px) {
       flex-direction: column;
       align-items: center;
       padding-left: 0;
@@ -650,7 +663,7 @@ footer {
     border: #9F9EA3;
   }
 
-  @media only screen and (max-width: 425px) {
+  @media (min-width: 320px) and (max-width: 425px) {
     width: 85%;
     height: 140px;
     flex-direction: column;
@@ -689,9 +702,9 @@ footer {
 .empty {
   width: 10px;
   height: 1px;
-  margin-bottom: 8%;
+  margin-bottom: 10%;
 
-  @media only screen and (max-width: 425px) {
+  @media (max-width: 768px) {
     margin-bottom: 33%;
   }
 }
@@ -706,4 +719,18 @@ footer {
 
 .error {
   border: 1px solid $red !important;
+}
+
+.line {
+  height: 10px;
+  width: 100%;
+  background-color: $cyan;
+  position: absolute;
+  top: 41%;
+
+  @media (max-width: 768px) {
+    height: 630px;
+    width: 10px;
+    top: 23%;
+  }
 }
